@@ -5,6 +5,15 @@
   </head>
   <body>
     <a-scene>
+            <a-assets timeout="30000">
+
+              <a-asset-item id="spinosaurus" src="https://cdn.glitch.com/324a5290-5aa7-4efc-92d6-ae0736433b12%2Fspinosaurus.glb" response-type="arraybuffer"></a-asset-item>
+      <a-entity id="dino" position="-1 0 -3" scale="0.5 0.5 0.5">
+        <a-entity position="0 2.15 0" rotation="0 55 0"
+                  gltf-model="#spinosaurus"
+                  animation-mixer
+                  shadow="cast: true; receive: false"></a-entity>
+      </a-entity>  
       <a-sky src="panorama1.jpg"></a-sky>
       <a-entity id="help" gltf-model="https://cdn.aframe.io/examples/ar/models/triceratops/scene.gltf" animation-mixer="loop; timeout=100" position="-362.96626 -33.35572 -13.60824" scale="0.5 0.5 0.5" animation__test="" rotation="0 23.212812111930173 0"></a-entity>
       <a-entity id="caisse+chat">
